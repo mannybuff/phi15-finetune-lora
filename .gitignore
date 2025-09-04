@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+.env
+.env.*
+
+.ipynb_checkpoints/
+jupyter_cache/
+
+.DS_Store
+Thumbs.db
+
+# HF / results
+results/
+**/runs/
+**/checkpoints/
+
+# Large artifacts
+*.pt
+*.bin
+*.safetensors

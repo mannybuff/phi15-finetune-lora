@@ -1,0 +1,19 @@
+# Training config (sample)
+model_name: microsoft/phi-1_5
+train_file: data/train.jsonl
+val_file: data/val.jsonl  # optional
+output_dir: results/phi15-lora
+max_steps: 500
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 2
+lr: 2e-4
+wd: 0.0
+warmup_ratio: 0.03
+gradient_accumulation_steps: 8
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+fp16: true
+bf16: false
+use_4bit: true
+seed: 42
