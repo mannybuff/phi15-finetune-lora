@@ -1,8 +1,7 @@
 # Phi-1.5 Local Fine-Tuning (LoRA)
 
-A clean, reproducible template to **fine-tune `microsoft/phi-1_5` locally** with LoRA (PEFT) using Hugging Face `transformers`, `datasets`, and (optionally) 4-bit loading via `bitsandbytes`. This repo packages your working training notebook plus a robust CLI training script.
+A clean, reproducible template to **fine-tune `microsoft/phi-1_5` locally** with LoRA (PEFT) using Hugging Face `transformers`, `datasets`, and (optionally) 4-bit loading via `bitsandbytes`. This repo packages a working training notebook plus a robust CLI training script.
 
-> Your note: *Training ran correctly; final results were mixed.* That often points to **data size/quality**, **over/under-training**, or **misaligned eval** rather than code. See the tuning checklist below.
 
 ## Quickstart
 ```bash
@@ -53,7 +52,7 @@ phi15-finetune-lora/
 
 ## Notes
 - This trains **only LoRA adapters**; base weights remain frozen (safer & faster).
-- Tokenizer: we set `pad_token = eos_token` if needed and use right padding.
+- Tokenizer: set `pad_token = eos_token` if needed and use right padding.
 - Target modules for LoRA are discovered heuristically to be robust across transformer versions.
 
 ## License
